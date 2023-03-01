@@ -6,9 +6,12 @@ public class reto9 {
         int bet = 0;
         int attempts = 1;
 
+        System.out.println("Bienvenid@ al juego del cara y sello por favor ingrese un monto para apostar");
+        int totalBet =lectura.nextInt();
+
             for ( int counter=0;counter <= 2; counter++)
             {
-                System.out.println("Bienvenid@ al juego del cara y sello por favor ingrese un monto para apostar");
+                System.out.println("Indique cuanto desea apostar del monto de:"+totalBet);
                 int userBet =lectura.nextInt();
                 
                 System.out.println("Seleccione una opcion (1=cara/2=sello)");
@@ -41,10 +44,12 @@ public class reto9 {
                     if (option == 2)
                     {
                         counter = 2;
-                        System.out.println("Usted jugo un total de: "+attempts+" intentos y acumulo un total de "+bet);
+                        totalBet+=bet;
+                        System.out.println("Usted jugo un total de: "+attempts+" intentos y acumulo un saldo final de "+totalBet);
                     }
                     else if (option== 1)
                     {
+                        totalBet+=bet;
                         counter = 1;
                         attempts ++;
                     }
